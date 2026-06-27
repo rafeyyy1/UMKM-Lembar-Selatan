@@ -1,0 +1,141 @@
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--dark-light);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+.badgesRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.owner {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.infoIcon {
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoText {
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.detailBtn {
+  flex-grow: 1;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+
+.quickLinks {
+  display: flex;
+  gap: 8px;
+}
+
+.quickIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  background-color: var(--dark-light);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.quickIcon:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.quickIcon:active {
+  transform: translateY(0);
+}

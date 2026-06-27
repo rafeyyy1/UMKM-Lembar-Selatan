@@ -1,0 +1,97 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(10, 25, 47, 0.08);
+  transition: var(--transition-fast);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoBadge {
+  background-color: var(--primary);
+  color: white;
+  padding: 6px 12px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px var(--primary-glow);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.logoSubtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLink {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--primary);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: var(--transition-fast);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    gap: 16px;
+  }
+  
+  .logoSubtitle {
+    display: none;
+  }
+}
